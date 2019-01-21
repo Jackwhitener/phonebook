@@ -1,0 +1,9 @@
+<% if user == 'admin' && pass == 'pass' %>
+Correct login: <br>
+<form action='/list' method='post'>
+<input type='Submit' value='Proceed'>
+</form>
+<% else %>
+Your login credentials are invalid. Go Back! <br>
+<input id="buttons" type = "button" value = "Back" onClick = "location.href='/'">
+<%end%>

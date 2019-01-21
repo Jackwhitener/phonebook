@@ -1,16 +1,10 @@
 <link rel="stylesheet" href="C:\Users\UserJ\Desktop\Coding\phonebook\public\css/style.css">
-<% require_relative 'csv.rb' %>
-<% arr = [] %>
-<% readfrompage(arr) %>
-First Name | Last Name | Address | Phone Number | Email Address <br>
-<% arr.each do |row| %>
-  <%= row[0] %>
-  <%= row[1] %>
-  <%= row[2] %>
-  <%= row[3] %>
-  <%= row[4] %>
-  <br>
-<% end %>
-<form action='/addperson' method='post'>
-<input type='Submit' value='Add Person'>
+Welcome!
+<form action='/viewcon' method='/post'>
+View Contacts:
+ <input type='submit' value='View'>
+</form>
+<form action='/editcon' method='/post'>
+Edit Contacts:
+ <input type='submit' value='Edit'>
 </form>
