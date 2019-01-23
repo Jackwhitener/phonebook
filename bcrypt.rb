@@ -9,3 +9,5 @@ end
 def hashpass(pass)
     return BCrypt::Password.create(pass)
 end
+def passcheck(pass,hash)
+end
