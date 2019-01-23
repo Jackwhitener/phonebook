@@ -12,4 +12,8 @@ class My_test < Minitest::Test
         pass = "thisiswrong"
         assert_equal(false, checkpass(pass))
     end
+    def test_for_hashpass
+        pass = "pass"
+        assert_equal(BCrypt::Password.create(pass), hashpass(pass))
+    end
 end

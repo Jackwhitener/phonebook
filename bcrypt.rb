@@ -6,3 +6,5 @@ def checkpass(pass)
     puts my_password == pass
     return my_password == pass
 end
+def hashpass(pass)
+end
