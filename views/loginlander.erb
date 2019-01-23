@@ -1,9 +1,6 @@
 <% require_relative 'C:\Users\UserJ\Desktop\Coding\phonebook\bcrypt.rb'%>
-<% puts pass %>
 <% hash = hashpass('pass')%>
-<% puts hash == pass %>
 <% correct = passcheck(pass,hash) %>
-<% puts correct %>
 <% if user == 'admin' && correct == true %>
 Correct login, welcome: <%= user %>. <br>
 <form action='/list' method='post'>
