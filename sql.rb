@@ -1,2 +1,3 @@
 require 'mysql2'
-client = Mysql2::Client.new(:host => "localhost", :username => "root")
+load "./local_ENV.rb" if File.exist?('./local_ENV.rb')
+
