@@ -7,4 +7,5 @@ def checkpass(pass)
     return my_password == pass
 end
 def hashpass(pass)
+    return BCrypt::Password.create(pass)
 end
