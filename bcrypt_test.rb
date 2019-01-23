@@ -8,5 +8,8 @@ class My_test < Minitest::Test
         pass = "pass"
         assert_equal(true, checkpass(pass))
     end
-
+    def test_bcrypt_wrong
+        pass = "thisiswrong"
+        assert_equal(false, checkpass(pass))
+    end
 end
