@@ -21,4 +21,8 @@ class My_test < Minitest::Test
         hash = hashpass(pass)
         assert_equal(true, passcheck(pass,hash))
     end
+    def test_for_invalidclass
+        pass = 21
+        assert_equal(BCrypt::Password.create("21") == "21", (hashpass(pass) == pass))
+    end
 end
