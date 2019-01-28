@@ -12,4 +12,8 @@ class My_test < Minitest::Test
         userid = uuid()
         assert_equal(16, userid.to_s.length)
     end
+    def test_for_randomly_generated
+        userid = uuid()
+        assert_equal(false, 1111111111111111 == userid )
+    end
 end
