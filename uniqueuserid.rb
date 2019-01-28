@@ -1,3 +1,3 @@
-def userid
+def uuid
 
 end
