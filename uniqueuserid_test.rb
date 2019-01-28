@@ -8,4 +8,8 @@ class My_test < Minitest::Test
         userid = uuid()
         assert_equal(Integer, userid.class)
     end
+    def test_for_length
+        userid = uuid()
+        assert_equal(16, userid.to_s.length)
+    end
 end
