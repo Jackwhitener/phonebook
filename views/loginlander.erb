@@ -5,7 +5,7 @@ Your login credentials are invalid. Go Back! <br>
 <% else %>
 Correct login, welcome!. <br>
 <form action='/list' method='post'>
-<input type='Hidden' value='<%= user_id %>'>
+<input type='Hidden' name='user_id' value='<%= user_id %>'>
 <input type='Submit' value='Proceed'>
 </form>
 <%end%>

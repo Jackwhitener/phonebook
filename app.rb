@@ -17,7 +17,6 @@ post '/loginlander' do
 end
 get '/loginlander' do
     user_id = params[:user_id]
-    puts user_id
     erb :loginlander, locals: {user_id: user_id}
 end
 post '/list' do
@@ -28,20 +27,11 @@ get '/list' do
     user_id = params[:user_id]
 erb :list, locals: {user_id: user_id}
 end
-post '/register' do
-    redirect '/register?'
-end
-get '/register' do
-    erb :register, locals: {user_id: user_id}
-end
-post '/registered' do
-    redirect '/list?user_id=' + user_id
-end
 post '/viewcon' do
     user_id = params[:user_id]
-    redirect '/viewcon?user_id=' + user_id
+    redirect '/view?user_id='
 end
-get '/viewcon' do
+get '/view' do
     user_id = params[:user_id]
     erb :view, locals: {user_id: user_id}
 end
@@ -49,7 +39,19 @@ post '/editcon' do
     user_id = params[:user_id]
     redirect '/edit?user_id=' + user_id
 end
-get '/editcon' do
+get '/edit' do
     user_id = params[:user_id]
     erb :edit, locals: {user_id: user_id}
+end
+post '/register' do
+    redirect '/register?'
+end
+get '/register' do
+    erb :register
+end
+post '/registered' do
+    user = params[:username]
+    pass = params[:password]
+    add_user(user, pass)
+    redirect '/'
 end

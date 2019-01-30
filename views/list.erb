@@ -1,13 +1,13 @@
 <link rel="stylesheet" href="C:\Users\UserJ\Desktop\Coding\phonebook\public\css/style.css">
 Welcome!
-<form action='/viewcon' method='/post'>
+<form action='/view' method='/post'>
 View Contacts:
  <input type='submit' value='View'>
- <input type='Hidden' value='<%= user_id %>'>
+ <input type='Hidden' name= 'user_id' value='<%= user_id %>'>
 </form>
-<form action='/editcon' method='/post'>
+<form action='/edit' method='/post'>
 Edit Contacts:
  <input type='submit' value='Edit'>
- <input type='Hidden' value='<%= user_id %>'>
+ <input type='Hidden' name='user_id' value='<%= user_id %>'>
 </form>
 <input id="buttons" type = "button" value = "Log Out" onClick = "location.href='/'">
