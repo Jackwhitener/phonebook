@@ -1,3 +1,10 @@
-insert view page here <br>
+<% require_relative 'C:/Users/UserJ/Desktop/Coding/phonebook/sql.rb' %>
+<% arr = contact_reader(user_id) %>
+<% arr.each do |contact|%>
+    <% contact.each do |item| %>
+        <%= item %> |
+    <%end%>
+    <br>
+<%end%>
 <input type='Hidden' name='user_id' value='<%= user_id %>'>
 <input type="button" value="Back" onclick="history.back()">

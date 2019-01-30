@@ -56,7 +56,7 @@ def user_id(username)
         ary << contact["notes"]
         array1 << ary
     end
-    p array1
+    puts array1
     return array1
 end
 def add_contact(name, phone, address, relationship, notes, userid)
@@ -65,4 +65,5 @@ def add_contact(name, phone, address, relationship, notes, userid)
       VALUES ('#{name}', '#{phone}', '#{address}', '#{relationship}', '#{notes}', '#{userid}')"
     )
 end
-contact_reader("fee2014d-249c-11e9-bcc6-9828a60e06f1" )
+# add_contact("frank", "1234567890", "1234 applewood plaza", "friend", "he is a nice guy", "fee2014d-249c-11e9-bcc6-9828a60e06f1" )
+# contact_reader("fee2014d-249c-11e9-bcc6-9828a60e06f1" )
