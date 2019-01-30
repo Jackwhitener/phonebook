@@ -9,7 +9,8 @@ end
 def hashpass(pass)
     return BCrypt::Password.create(pass)
 end
-def passcheck(pass,hash)
-    return hash == pass
+def passcheck(pass,hashpass)
+    puts hashpass
+    return BCrypt::Password.new(hashpass) == pass
 end
 checkpass("apples")

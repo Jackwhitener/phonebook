@@ -1,13 +1,11 @@
-<% require_relative 'C:\Users\UserJ\Desktop\Coding\phonebook\bcrypt.rb'%>
-<% hash = hashpass('pass')%>
-<% adminu = 'admin' %>
-<% correct = passcheck(pass,hash) %>
-<% if user == adminu && correct == true %>
-Correct login, welcome: <%= user %>. <br>
-<form action='/list' method='post'>
-<input type='Submit' value='Proceed'>
-</form>
-<% else %>
+<% require_relative 'C:\Users\UserJ\Desktop\Coding\phonebook\sql.rb'%>
+<% if user_id == 'wrong' %>
 Your login credentials are invalid. Go Back! <br>
 <input id="buttons" type = "button" value = "Back" onClick = "location.href='/'">
+<% else %>
+Correct login, welcome!. <br>
+<form action='/list' method='post'>
+<input type='Hidden' value='<%= user_id %>'>
+<input type='Submit' value='Proceed'>
+</form>
 <%end%>

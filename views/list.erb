@@ -3,9 +3,11 @@ Welcome!
 <form action='/viewcon' method='/post'>
 View Contacts:
  <input type='submit' value='View'>
+ <input type='Hidden' value='<%= user_id %>'>
 </form>
 <form action='/editcon' method='/post'>
 Edit Contacts:
  <input type='submit' value='Edit'>
+ <input type='Hidden' value='<%= user_id %>'>
 </form>
 <input id="buttons" type = "button" value = "Log Out" onClick = "location.href='/'">

@@ -26,4 +26,19 @@ def add_user(username, password)
         )
     end
 end
-add_user('admin', 'password')
+def get_pass(username)
+    password = client.query(
+      "SELECT password FROM users WHERE users.username = '#{username}'"
+    )
+    password.each do |pass|
+      return pass["password"].to_s
+    end
+end
+def user_id(username)
+    id = client.query(
+      "SELECT userid FROM users WHERE users.username = '#{username}'"
+    )
+    id.each do |i|
+      return i["userid"].to_s
+    end
+  end
