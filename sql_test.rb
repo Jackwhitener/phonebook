@@ -13,4 +13,11 @@ class My_test < Minitest::Test
     def test_check_if_not_taken_non_string
         assert_equal(false,check_if_taken(123))
     end
+    def test_for_add_false
+        assert_equal(false,add_user('admin', 'apples123'))
+    end
+    def test_for_add_account
+        username = Random.new
+        assert_equal(true, add_user(username.rand(1000000), "password"))
+    end
 end

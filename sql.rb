@@ -24,6 +24,9 @@ def add_user(username, password)
           "INSERT INTO users (userid, username, password)
           VALUES (UUID(), '#{username}', '#{password}')"
         )
+        return true
+    else
+      return false
     end
 end
 def get_pass(username)
