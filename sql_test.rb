@@ -7,5 +7,7 @@ class My_test < Minitest::Test
     def test_check_if_taken
         assert_equal(true, check_if_taken('admin'))
     end
-    
+    def test_check_if_not_taken
+        assert_equal(false, check_if_taken('smittywerberjaegermanjensen'))
+    end
 end
