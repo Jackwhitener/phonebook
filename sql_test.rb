@@ -20,4 +20,10 @@ class My_test < Minitest::Test
         username = Random.new
         assert_equal(true, add_user(username.rand(1000000), "password"))
     end
+    def test_contact_reader
+        contact = contact_reader("fee2014d-249c-11e9-bcc6-9828a60e06f1" )
+        puts "#{contact}"
+        test_contact = ["frank", "1234567890", "1234 applewood plaza", "friend", "he is a nice guy"]
+        assert_equal(true, contact.include?(test_contact))
+    end
 end
