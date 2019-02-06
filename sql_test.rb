@@ -30,6 +30,6 @@ class My_test < Minitest::Test
         assert_equal(true, add_contact("frank", "1234567890", "1234 applewood plaza", "friend", "he is a nice guy", "fee2014d-249c-11e9-bcc6-9828a60e06f1" ))
     end
     def test_contact_remove
-        assert_equal(true,remove_contact("frank", "fee2014d-249c-11e9-bcc6-9828a60e06f1"))
+        assert_equal(true, remove_contact("frank", "fee2014d-249c-11e9-bcc6-9828a60e06f1"))
     end
 end

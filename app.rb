@@ -62,3 +62,4 @@ post '/add' do
     work = add_contact(name, phone, address, relationship, comment, user_id)
     redirect '/edit?user_id=' + user_id
   end
+  
