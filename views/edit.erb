@@ -1,6 +1,7 @@
 <% require_relative 'C:/Users/UserJ/Desktop/Coding/phonebook/sql.rb' %>
 <link rel="stylesheet" href="/css/style.css">
 <body>
+name | phone | address | relationship | comment | <br>
 <% arr = contact_reader(user_id) %>
 <% arr.each do |contact|%>
     <% contact.each do |item| %>
