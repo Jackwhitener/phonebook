@@ -16,6 +16,7 @@ h1 {
 	animation-duration: 15s;
 	animation-iteration-count: infinite;
 	border-radius: 12px;
+	border: 2px solid;
 
 	}
 body {
