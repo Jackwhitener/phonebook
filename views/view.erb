@@ -1,15 +1,21 @@
 <% require_relative 'C:/Users/UserJ/Desktop/Coding/phonebook/sql.rb' %>
 <link rel="stylesheet" href="/css/style.css">
 <body>
-name | phone | address | relationship | comment | 
-<br>
+<table style="width:100%">
+<tr>
+<th>name</th> <th>phone</th> <th>address</th><th>relationship</th> <th>comment</th>
+</tr> 
 <% arr = contact_reader(user_id) %>
 <% arr.each do |contact|%>
+    <tr>
     <% contact.each do |item| %>
-        <%= item %> |
+        <td>
+        <%= item %>
+        </td>
     <%end%>
-    <br>
+    </tr>
 <%end%>
+</table>
 <input type='Hidden' name='user_id' value='<%= user_id %>'>
 <input type="button" value="Back" onclick="history.back()">
 </body>
