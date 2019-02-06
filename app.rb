@@ -55,3 +55,13 @@ post '/registered' do
     add_user(user, pass)
     redirect '/'
 end
+post '/add' do
+    user_id = params[:user_id]
+    name = params[:name]
+    phone = params[:phone]
+    address = params[:address]
+    relationship = params[:relationship]
+    comment = params[:comment]
+    work = add_contact(name, phone, address, relationship, comment, user_id)
+    redirect '/edit?user_id=' + user_id
+  end
