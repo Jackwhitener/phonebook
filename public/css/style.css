@@ -1,20 +1,22 @@
 @keyframes anim {
-	0% {background-color:blue;}
-	50% {background-color:blueviolet;}
-	100% {background-color:blue;}
+	0% {background-color:purple;}
+	50% {background-color:darkorchid;}
+	100% {background-color:purple;}
 }
 @keyframes banim {
 	0% {background-color:darkorchid;}
-	50% {background-color:darkgreen;}
+	50% {background-color:purple;}
 	100% {background-color:darkorchid;}
 }
-
 h1 {
 	background-color: blue;
 	text-align:center;
     color:white;
     animation-name: anim;
-	animation-duration: 10s;
+	animation-duration: 15s;
+	animation-iteration-count: infinite;
+	border-radius: 12px;
+
 	}
 body {
 	font-family: 'Impact', Charcoal, sans-serif;
@@ -23,5 +25,17 @@ body {
 	font-size: 40;
 	background-color: darkorchid;
 	animation-name: banim;
-	animation-duration: 10s;
+	animation-duration: 15s;
 	animation-iteration-count: infinite;}
+input[type=button], input[type=submit], input[type=reset] {
+	font-family: 'Impact', Charcoal, sans-serif;
+	background-color: purple;
+	color:white;
+	animation-name: anim;
+	animation-duration: 15s;
+	border: 2px solid;
+	padding: 16px 32px;
+	border-radius: 12px;
+	text-decoration: none;
+	margin: 4px 2px;
+	cursor: pointer;}
