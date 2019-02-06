@@ -1,0 +1,27 @@
+@keyframes anim {
+	0% {background-color:blue;}
+	50% {background-color:blueviolet;}
+	100% {background-color:blue;}
+}
+@keyframes banim {
+	0% {background-color:darkorchid;}
+	50% {background-color:darkgreen;}
+	100% {background-color:darkorchid;}
+}
+
+h1 {
+	background-color: blue;
+	text-align:center;
+    color:white;
+    animation-name: anim;
+	animation-duration: 10s;
+	}
+body {
+	font-family: 'Impact', Charcoal, sans-serif;
+	text-align:center;
+	color:white;
+	font-size: 40;
+	background-color: darkorchid;
+	animation-name: banim;
+	animation-duration: 10s;
+	animation-iteration-count: infinite;}

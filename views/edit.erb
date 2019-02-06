@@ -1,4 +1,6 @@
 <% require_relative 'C:/Users/UserJ/Desktop/Coding/phonebook/sql.rb' %>
+<link rel="stylesheet" href="/css/style.css">
+<body>
 <% arr = contact_reader(user_id) %>
 <% arr.each do |contact|%>
     <% contact.each do |item| %>
@@ -6,6 +8,7 @@
     <%end%>
     <br>
 <%end%>
+<br>
 Create a contact: <br>
 <form action='/add' method='post'>
 <input type='Hidden' name='user_id' value='<%= user_id %>'>
