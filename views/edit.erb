@@ -6,14 +6,21 @@
     <%end%>
     <br>
 <%end%>
+Create a contact: <br>
 <form action='/add' method='post'>
 <input type='Hidden' name='user_id' value='<%= user_id %>'>
 <input type='text' name='name' value='name'>
 <input type='text' name='phone' value='phone  '>
 <input type='text' name='address' value='address'>
 <input type='text' name='relationship' value='relationship'>
-<input type='text' name='comment' value='comment'> <br>
+<input type='text' name='comment' value='comment'>
 <input type='submit' value='Submit'>
+</form>
+Delete a contact: <br>
+<form action='/delete' method='post'>
+<input type='Hidden' name='user_id' value='<%= user_id %>'>
+<input type='text' name='name' value='contact name'>
+<input type='submit' value='Delete'>
 </form>
 <input type='Hidden' name='user_id' value='<%= user_id %>'>
 <input type="button" value="Back" onclick="history.back()">

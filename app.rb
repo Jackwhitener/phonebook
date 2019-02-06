@@ -62,4 +62,10 @@ post '/add' do
     work = add_contact(name, phone, address, relationship, comment, user_id)
     redirect '/edit?user_id=' + user_id
   end
-  
+
+  post '/delete' do
+    user_id = params[:user_id]
+    name = params[:name]
+    remove_contact(name, user_id)
+    redirect '/edit?user_id=' + user_id
+  end
