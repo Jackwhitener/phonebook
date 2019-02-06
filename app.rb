@@ -46,9 +46,6 @@ end
 post '/register' do
     redirect '/register?'
 end
-get '/register' do
-    erb :register
-end
 post '/registered' do
     user = params[:username]
     pass = params[:password]
