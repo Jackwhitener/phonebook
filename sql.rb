@@ -69,5 +69,7 @@ def add_contact(name, phone, address, relationship, notes, userid)
     )
     return true
 end
+def remove_contact(name, user_id)
+end
 # add_contact("frank", "1234567890", "1234 applewood plaza", "friend", "he is a nice guy", "fee2014d-249c-11e9-bcc6-9828a60e06f1" )
 # contact_reader("fee2014d-249c-11e9-bcc6-9828a60e06f1" )
