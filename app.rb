@@ -51,7 +51,8 @@ post '/registered' do
     pass = params[:password]
     added = add_user(user, pass)
     if added == true
-        redirect '/'
+        userid = user_id(user)
+        redirect '/loginlander?user_id=' + userid + '&added=' + added.to_s
     elsif added == false
         redirect '/registerfailed'
     end
