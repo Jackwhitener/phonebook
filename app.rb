@@ -49,8 +49,12 @@ end
 post '/registered' do
     user = params[:username]
     pass = params[:password]
-    add_user(user, pass)
-    redirect '/'
+    added = add_user(user, pass)
+    if added == true
+        redirect '/'
+    elsif added == false
+        redirect '/registerfailed'
+    end
 end
 post '/add' do
     user_id = params[:user_id]
@@ -62,10 +66,12 @@ post '/add' do
     work = add_contact(name, phone, address, relationship, comment, user_id)
     redirect '/edit?user_id=' + user_id
   end
-
   post '/delete' do
     user_id = params[:user_id]
     name = params[:name]
     remove_contact(name, user_id)
     redirect '/edit?user_id=' + user_id
+  end
+  get '/registerfailed' do
+    erb :registerfailed
   end
