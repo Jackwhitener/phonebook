@@ -1,5 +1,5 @@
 require 'sinatra'
-require 'csv'
+require 'mysql2'
 require_relative 'sql.rb'
 get '/' do
     erb :home
