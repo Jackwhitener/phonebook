@@ -2,8 +2,8 @@
 <h1> Login: </h1>
 <body>
 <form action='/loginlander' method='post'> Username
-<input type='text' name='username' value=''> <br> Password 
-<input type='password' name='password' value=''> <br>
+<input type='text' name='username' value='' pattern="[a-zA-Z0-9 ]{4,20}" title="Must be between 4 and 20 characters, letters and numbers only."> <br> Password 
+<input type='password' name='password' value=''pattern="[a-zA-Z0-9 ]{6,60}" title="Must be between 6 and 60 characters, letters and numbers only."> <br>
 <input type='submit' value='Submit'><br>
 </form>
 <h1>
@@ -11,8 +11,8 @@ Don't have an account?
 </h1>
 Register:
 <form action='/registered' method='post'>Username
-<input type='text' name='username' value=''> <br> Password 
-<input type='password' name='password' value=''> <br>
+<input type='text' name='username' value='' pattern="[a-zA-Z0-9 ]{4,20}" title="Must be between 4 and 20 characters, letters and numbers only."> <br> Password 
+<input type='password' name='password' value='' pattern="[a-zA-Z0-9 ]{6,60}" title="Must be between 6 and 60 characters, letters and numbers only."> <br>
 <input type='submit' value='Submit'>
 </form>
 </body>

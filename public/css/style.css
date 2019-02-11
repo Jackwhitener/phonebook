@@ -6,8 +6,7 @@
 @keyframes banim {
 	0% {background-color:darkorchid;}
 	50% {background-color:purple;}
-	100% {background-color:darkorchid;}
-}
+	100% {background-color:darkorchid;}}
 h1 {
 	background-color: blue;
 	text-align:center;
@@ -16,9 +15,7 @@ h1 {
 	animation-duration: 15s;
 	animation-iteration-count: infinite;
 	border-radius: 12px;
-	border: 2px solid;
-
-	}
+	border: 2px solid;	}
 body {
 	font-family: 'Impact', Charcoal, sans-serif;
 	text-align:center;
