@@ -70,9 +70,33 @@ post '/add' do
   post '/delete' do
     user_id = params[:user_id]
     name = params[:name]
-    remove_contact(name, user_id)
+    phone = params[:phone]
+    address = params[:address]
+    relationship = params[:relationship]
+    comment = params[:comment]
+    remove_contact(name, phone, address, relationship, comment, user_id)
     redirect '/edit?user_id=' + user_id
   end
+  post '/edit' do
+    user_id = params[:user_id]
+    name = params[:name]
+    phone = params[:phone]
+    address = params[:address]
+    relationship = params[:relationship]
+    comment = params[:comment]
+    name2 = params[:name2]
+    phone2 = params[:phone2]
+    address2 = params[:address2]
+    relationship2 = params[:relationship2]
+    comment2 = params[:comment2]
+    remove_contact(name, phone, address, relationship, comment, user_id)
+    add_contact(name2, phone2, address2, relationship2, comment2, user_id)
+    redirect '/edit?user_id=' + user_id
+  end
+  post '/back' do
+    user_id = params[:user_id]
+    redirect '/list?user_id=' + user_id
+end
   get '/registerfailed' do
     erb :registerfailed
   end

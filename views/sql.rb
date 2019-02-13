@@ -68,10 +68,14 @@ def add_contact(name, phone, address, relationship, notes, userid)
     )
     return true
 end
-def remove_contact(name, user_id)
+def remove_contact(name, phone, address, relationship, notes, user_id)
   client.query(
     "DELETE FROM contacts
     WHERE contacts.name = '#{name}'
+    AND contacts.phone = '#{phone}'
+    AND contacts.address = '#{address}'
+    AND contacts.relationship = '#{relationship}'
+    AND contacts.notes = '#{notes}'
     AND contacts.userid = '#{user_id}'"
   )
   return true
