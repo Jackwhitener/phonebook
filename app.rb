@@ -64,6 +64,9 @@ post '/add' do
     address = params[:address]
     relationship = params[:relationship]
     comment = params[:comment]
+    if name.include?("\\")
+        name = name.delete("\\")
+    end
     work = add_contact(name, phone, address, relationship, comment, user_id)
     redirect '/edit?user_id=' + user_id
   end
