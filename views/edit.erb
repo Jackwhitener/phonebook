@@ -25,33 +25,33 @@ Create a contact: <br>
 <input type='text' name='name' placeholder='name' pattern="[a-zA-Z0-9 /' (/")]+" title='Example: Billy Bob Joe Harris' required>
 <input type='text' name='phone' placeholder='phone'] pattern="[0-9(-)-]{10,30}" title='Example: (304)-555-5555'  required>
 <input type='text' name='address' placeholder='address' title='Example: 123 Applebees plaza' required>
-<input type='text' name='relationship' placeholder='relationship' pattern="[a-zA-Z0-9 /' (/")]+" title="Example: Acquaintence" required>
-<input type='text' name='comment' placeholder='comment' pattern="[a-zA-Z0-9 /' (/")]+" title='' required>
+<input type='text' name='relationship' placeholder='relationship' pattern="[a-zA-Z0-9 ]" title="Example: Acquaintence" required>
+<input type='text' name='comment' placeholder='comment' pattern="[a-zA-Z0-9 ]" title='' required>
 <input type='submit' value='Submit'>
 </form>
 Delete a contact: <br>
 <form action='/delete' method='post'>
 <input type='Hidden' name='user_id' value='<%= user_id %>'>
-<input type='text' name='name'  placeholder='name' pattern="[a-zA-Z0-9 /' (/")]+" title='Example: Billy Bob Joe Harris' required>
+<input type='text' name='name' placeholder='name' pattern="[a-zA-Z0-9 /' (/")]+" title='Example: Billy Bob Joe Harris' required>
 <input type='text' name='phone' placeholder='phone'] pattern="[0-9(-)-]{10,30}" title='Example: (304)-555-5555'  required>
-<input type='text' name='address' placeholder='address' pattern="[a-zA-Z0-9 ]{1,240}" title='Example: 123 Applebees plaza' required>
-<input type='text' name='relationship' placeholder='relationship' pattern="[a-zA-Z0-9 /' (/")]+" title="Example: Acquaintence" required>
-<input type='text' name='comment' placeholder='comment' pattern="[a-zA-Z0-9 /' (/")]+" title='' required>
+<input type='text' name='address' placeholder='address' title='Example: 123 Applebees plaza' required>
+<input type='text' name='relationship' placeholder='relationship' pattern="[a-zA-Z0-9 ]" title="Example: Acquaintence" required>
+<input type='text' name='comment' placeholder='comment' pattern="[a-zA-Z0-9 ]" title='' required>
 <input type='submit' value='Delete'>
 </form>
 Edit a contact: <br>
 <form action='/edit' method='post'>
 <input type='Hidden' name='user_id' value='<%= user_id %>'>
-<input type='text' name='name'  placeholder='name' pattern="[a-zA-Z0-9 /' (/")]+" title='Example: Billy Bob Joe Harris' required>
+<input type='text' name='name' placeholder='name' pattern="[a-zA-Z0-9 /' (/")]+" title='Example: Billy Bob Joe Harris' required>
 <input type='text' name='phone' placeholder='phone'] pattern="[0-9(-)-]{10,30}" title='Example: (304)-555-5555'  required>
-<input type='text' name='address' placeholder='address' pattern="[a-zA-Z0-9 ]{1,240}" title='Example: 123 Applebees plaza' required>
-<input type='text' name='relationship' placeholder='relationship' pattern="[a-zA-Z0-9 /' (/")]+"  title="Example: Acquaintence" required>
-<input type='text' name='comment' placeholder='comment' pattern="[a-zA-Z0-9 ]{1,240}" title='' required><br>
+<input type='text' name='address' placeholder='address' title='Example: 123 Applebees plaza' required>
+<input type='text' name='relationship' placeholder='relationship' pattern="[a-zA-Z0-9 ]" title="Example: Acquaintence" required>
+<input type='text' name='comment' placeholder='comment' pattern="[a-zA-Z0-9 ]" title='' required><br>
 <input type='text' name='name2'  placeholder='name' " pattern="[a-zA-Z0-9 /' (/")]+" title='Example: Billy Bob Joe Harris' required>
 <input type='text' name='phone2' placeholder='phone'] pattern="[0-9(-)-]{10,30}" title='Example: (304)-555-5555'  required>
 <input type='text' name='address2' placeholder='address' pattern="[a-zA-Z0-9 ]{1,240}" title='Example: 123 Applebees plaza' required>
-<input type='text' name='relationship2' placeholder='relationship' pattern="[a-zA-Z0-9 /' (/")]+" title="Example: Acquaintence" required>
-<input type='text' name='comment2' placeholder='comment' pattern="[a-zA-Z0-9 /' (/")]+" title='' required>
+<input type='text' name='relationship2' placeholder='relationship' pattern="[a-zA-Z0-9 ]+" title="Example: Acquaintence" required>
+<input type='text' name='comment2' placeholder='comment' pattern="[a-zA-Z0-9 ]+" title='' required>
 <input type='submit' value='Replace'>
 </form>
 <input type='Hidden' name='user_id' value='<%= user_id %>'>
