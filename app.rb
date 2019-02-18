@@ -78,6 +78,7 @@ post '/add' do
     redirect '/edit?user_id=' + user_id
   end
   post '/edit' do
+    
     user_id = params[:user_id]
     name = params[:name]
     phone = params[:phone]
@@ -89,8 +90,13 @@ post '/add' do
     address2 = params[:address2]
     relationship2 = params[:relationship2]
     comment2 = params[:comment2]
+    list_of_contacts = contact_reader(user_id)
+    puts "This is the list of contacts: #{list_of_contacts}"
+    if list_of_contacts.include?([name,phone,address,relationship,comment])
     remove_contact(name, phone, address, relationship, comment, user_id)
     add_contact(name2, phone2, address2, relationship2, comment2, user_id)
+    redirect '/edit?user_id=' + user_id
+    end
     redirect '/edit?user_id=' + user_id
   end
   post '/back' do
