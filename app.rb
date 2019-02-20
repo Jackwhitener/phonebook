@@ -67,6 +67,12 @@ post '/add' do
     if name.include?("\\")
         name = name.delete("\\")
     end
+    if relationship.include?("\\")
+        name = name.delete("\\")
+    end
+    if comment.include?("\\")
+        name = name.delete("\\")
+    end
     work = add_contact(name, phone, address, relationship, comment, user_id)
     redirect '/edit?user_id=' + user_id
   end
@@ -93,6 +99,15 @@ post '/add' do
     address2 = params[:address2]
     relationship2 = params[:relationship2]
     comment2 = params[:comment2]
+    if name2.include?("\\")
+        name = name.delete("\\")
+    end
+    if relationship2.include?("\\")
+        name = name.delete("\\")
+    end
+    if comment2.include?("\\")
+        name = name.delete("\\")
+    end
     list_of_contacts = contact_reader(user_id)
     puts "This is the list of contacts: #{list_of_contacts}"
     if list_of_contacts.include?([name,phone,address,relationship,comment])
